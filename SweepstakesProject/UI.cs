@@ -8,5 +8,15 @@ namespace SweepstakesProject
 {
   public static class UI
   {
+    public static string PromptFor(string context, Func<string, bool> valid)
+    {
+      string userInput;
+      do
+      {
+        Console.WriteLine(context);
+        userInput = Console.ReadLine().Trim();
+      } while (userInput == null || userInput == "" || !valid(userInput));
+      return userInput;
+    }
   }
 }
