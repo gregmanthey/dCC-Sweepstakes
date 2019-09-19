@@ -9,10 +9,13 @@ namespace SweepstakesProject
   class Sweepstakes
   {
     string name;
+    int count;
     Dictionary<int, Contestant> contestants;
+    public int Count { get => count; }
     public Sweepstakes(string name)
     {
       this.name = name;
+      count = 0;
     }
 
     public void RegisterContestant(Contestant contestant)
