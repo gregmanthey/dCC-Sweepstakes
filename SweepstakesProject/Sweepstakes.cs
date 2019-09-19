@@ -27,10 +27,9 @@ namespace SweepstakesProject
     }
     public Contestant PickWinner()
     {
-      Contestant winner;
       Random rng = new Random();
-      int winnerKey = rng.Next(1, contestants.Count); 
-      contestants.TryGetValue(winnerKey, out winner);
+      int winnerKey = rng.Next(1, contestants.Count + 1); 
+      contestants.TryGetValue(winnerKey, out Contestant winner);
       return winner;
     }
     public void PrintContestantInfo(Contestant contestant)
