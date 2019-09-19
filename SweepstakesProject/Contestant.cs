@@ -11,7 +11,7 @@ namespace SweepstakesProject
     string firstName;
     string lastName;
     string emailAddress;
-    int registrationNumber;
+    public int registrationNumber;
 
     public Contestant(string firstName, string lastName, string emailAddress)
     {
