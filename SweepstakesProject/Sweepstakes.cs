@@ -35,9 +35,12 @@ namespace SweepstakesProject
     }
     public void PrintContestantInfo(Contestant contestant)
     {
+      UI.Display("-----------------------------------------------------------------");
       UI.Display($"               Name: {contestant.FirstName} {contestant.LastName}");
       UI.Display($"      Email Address: {contestant.EmailAddress}");
       UI.Display($"Registration Number: {contestant.registrationNumber}");
+      UI.Display("-----------------------------------------------------------------");
+      UI.Pause();
     }
   }
 }
