@@ -11,6 +11,10 @@ namespace SweepstakesProject
     ISweepstakesManager sweepstakesManager;
     Sweepstakes currentSweepstakes;
 
+    public MarketingFirm(ISweepstakesManager sweepstakesManager)
+    {
+      this.sweepstakesManager = sweepstakesManager;
+    }
     public void AddContestant()
     {
       string firstName = UI.PromptFor("What is the contestant's first name?", Validation.AlphabetCharacters);
