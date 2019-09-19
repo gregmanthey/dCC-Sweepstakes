@@ -9,20 +9,17 @@ namespace SweepstakesProject
   class Sweepstakes
   {
     string name;
-    int count;
     Dictionary<int, Contestant> contestants;
-    public int Count { get => count; }
+    public int Count { get => contestants.Count; }
     public Sweepstakes(string name)
     {
       this.name = name;
       contestants = new Dictionary<int, Contestant>();
-      count = 0;
     }
 
     public void RegisterContestant(Contestant contestant)
     {
-      count++;
-      contestant.registrationNumber = count;
+      contestant.registrationNumber = contestants.Count + 1;
       contestants.Add(contestant.registrationNumber, contestant);
     }
     public Contestant PickWinner()
