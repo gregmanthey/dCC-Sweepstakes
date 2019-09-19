@@ -10,16 +10,16 @@ namespace SweepstakesProject
   {
     ISweepstakesManager sweepstakesManager;
 
-    void BeginSweepstakes()
+    public void BeginSweepstakes()
     {
       Sweepstakes newSweepstakes = new Sweepstakes(UI.PromptFor("What do you want to name the sweepstakes?", Validation.AlphanumericCharactersAndSpace));
       sweepstakesManager.InsertSweepstakes(newSweepstakes);
     }
-    void EndSweepstakes()
+    public void EndSweepstakes()
     {
       Sweepstakes finishedSweepstakes = sweepstakesManager.GetSweepstakes();
       Contestant winner = finishedSweepstakes.PickWinner();
-      //notify winner
+      finishedSweepstakes.PrintContestantInfo(winner);
     }
   }
 }
