@@ -55,7 +55,19 @@ namespace SweepstakesProject
       Console.WriteLine("Invalid input. Please enter a number with a decimal.");
       return false;
     }
-   
+
+    public static bool SweepstakesManagerTypes(string input)
+    {
+      if (input.ToLower() == "stack" ||
+         input.ToLower() == "queue")
+      {
+        return true;
+      }
+      Console.WriteLine("Please enter \"stack\" or \"queue\".");
+      return false;
+    }
+
+
     public static bool YesNo(string input)
     {
       if (input.ToLower() == "yes" ||
