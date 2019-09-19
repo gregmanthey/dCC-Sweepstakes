@@ -8,6 +8,10 @@ namespace SweepstakesProject
 {
   public static class UI
   {
+    public static string SweepstakesManagerSetup()
+    {
+      return PromptFor("Which type of sweepstakes manager would you like? Stack or queue?", Validation.SweepstakesManagerTypes);
+    }
     public static string PromptFor(string context, Func<string, bool> valid)
     {
       string userInput;
