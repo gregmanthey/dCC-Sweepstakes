@@ -12,9 +12,9 @@ namespace SweepstakesProject
     string lastName;
     string emailAddress;
     public int registrationNumber;
-    string FirstName { get => firstName; }
-    string LastName { get => lastName; }
-    string EmailAddress { get => emailAddress; }
+    public string FirstName { get => firstName; }
+    public string LastName { get => lastName; }
+    public string EmailAddress { get => emailAddress; }
 
     public Contestant(string firstName, string lastName, string emailAddress)
     {
