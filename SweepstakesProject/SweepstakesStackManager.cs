@@ -16,12 +16,12 @@ namespace SweepstakesProject
     }
     public Sweepstakes GetSweepstakes()
     {
-      throw new NotImplementedException();
+      return sweepstakesStack.Pop();
     }
 
     public void InsertSweepstakes(Sweepstakes sweepstakes)
     {
-      throw new NotImplementedException();
+      sweepstakesStack.Push(sweepstakes);
     }
   }
 }
