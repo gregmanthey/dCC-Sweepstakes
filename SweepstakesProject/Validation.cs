@@ -25,6 +25,16 @@ namespace SweepstakesProject
       Console.WriteLine("Please enter only letters.");
       return false;
     }
+    public static bool EmailCharacters(string input)
+    {
+      Regex nonAlphabetChars = new Regex("[^a-zA-Z0-9 @.]");
+      if (!nonAlphabetChars.IsMatch(input))
+      {
+        return true;
+      }
+      Console.WriteLine("Please enter email address in the format \"UserName123@example.com\".");
+      return false;
+    }
     public static bool NumericCharacters(string input)
     {
       Regex nonNumericChars = new Regex("[^0-9]");
