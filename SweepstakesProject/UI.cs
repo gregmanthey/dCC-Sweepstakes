@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-  public static class UI
+static class UI
   {
+    public static Contestant ContestantSetUp()
+    {
+      string firstName = PromptFor("What is the contestant's first name?", Validation.AlphabetCharacters);
+      string lastName = PromptFor("What is the contestant's last name?", Validation.AlphabetCharacters);
+      string emailAddress = PromptFor("What is the contestant's email address?", Validation.EmailCharacters);
+      return new Contestant(firstName, lastName, emailAddress);
+    }
     public static string SweepstakesManagerSetup()
     {
       return PromptFor("Which type of sweepstakes manager would you like? Stack or queue?", Validation.SweepstakesManagerTypes);

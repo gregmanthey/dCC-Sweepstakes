@@ -17,11 +17,7 @@ namespace SweepstakesProject
     }
     public void AddContestant()
     {
-      string firstName = UI.PromptFor("What is the contestant's first name?", Validation.AlphabetCharacters);
-      string lastName = UI.PromptFor("What is the contestant's last name?", Validation.AlphabetCharacters);
-      string emailAddress = UI.PromptFor("What is the contestant's email address?", Validation.EmailCharacters);
-      Contestant contestant = new Contestant(firstName, lastName, emailAddress);
-      currentSweepstakes.RegisterContestant(contestant);
+      currentSweepstakes.RegisterContestant(UI.ContestantSetUp());
     }
     public void BeginSweepstakes()
     {
