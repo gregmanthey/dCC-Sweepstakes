@@ -15,12 +15,15 @@ namespace SweepstakesProject
     public Sweepstakes(string name)
     {
       this.name = name;
+      contestants = new Dictionary<int, Contestant>();
       count = 0;
     }
 
     public void RegisterContestant(Contestant contestant)
     {
-
+      count++;
+      contestant.registrationNumber = count;
+      contestants.Add(contestant.registrationNumber, contestant);
     }
     public Contestant PickWinner()
     {
