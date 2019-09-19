@@ -15,11 +15,11 @@ namespace SweepstakesProject
       this.name = name;
     }
 
-    void RegisterContestant(Contestant contestant)
+    public void RegisterContestant(Contestant contestant)
     {
 
     }
-    Contestant PickWinner()
+    public Contestant PickWinner()
     {
       Contestant winner;
       Random rng = new Random();
@@ -27,7 +27,7 @@ namespace SweepstakesProject
       contestants.TryGetValue(winnerKey, out winner);
       return winner;
     }
-    void PrintContestantInfo(Contestant contestant)
+    public void PrintContestantInfo(Contestant contestant)
     {
 
     }
